@@ -1,6 +1,7 @@
 "use client";
+
 import { Button } from "@/app/_components/ui/button";
-import UpsertTransactionButtonDialog from "@/app/_components/upsert-transaction-dialog";
+import UpsertTransactionDialog from "@/app/_components/upsert-transaction-dialog";
 import { Transaction } from "@prisma/client";
 import { PencilIcon } from "lucide-react";
 import { useState } from "react";
@@ -22,7 +23,7 @@ const EditTransactionButton = ({ transaction }: EditTransactionButtonProps) => {
       >
         <PencilIcon />
       </Button>
-      <UpsertTransactionButtonDialog
+      <UpsertTransactionDialog
         isOpen={dialogIsOpen}
         setIsOpen={setDialogIsOpen}
         defaultValues={{

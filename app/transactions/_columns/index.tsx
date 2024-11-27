@@ -2,7 +2,7 @@
 
 import { Transaction } from "@prisma/client";
 import { ColumnDef } from "@tanstack/react-table";
-import TransactionTypeBadge from "../_componentes/type-badge";
+
 import { Button } from "@/app/_components/ui/button";
 import { TrashIcon } from "lucide-react";
 import {
@@ -10,8 +10,9 @@ import {
   TRANSACTION_PAYMENT_METHOD_LABELS,
 } from "@/app/_constants/transactions";
 import EditTransactionButton from "../_componentes/edit-transaction-button";
+import TransactionTypeBadge from "../_componentes/type-badge";
 
-export const TransactionColumns: ColumnDef<Transaction>[] = [
+export const transactionColumns: ColumnDef<Transaction>[] = [
   {
     accessorKey: "name",
     header: "Nome",
