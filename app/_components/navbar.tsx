@@ -4,9 +4,18 @@ import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [isClient, setIsClient] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) return null;
+
   return (
     <nav className="flex justify-between border-b border-solid px-8 py-4">
       {/*esquerda*/}
